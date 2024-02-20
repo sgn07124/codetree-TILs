@@ -12,6 +12,7 @@ public class Main {
         
 
         for(int i=0; i<q; i++){
+            int cnt = 0;
             int qtype = sc.nextInt();
             if(qtype==1){
                 int a = sc.nextInt();
@@ -21,9 +22,13 @@ public class Main {
                 int a = sc.nextInt();
                 for(int j=0; j<n; j++){
                     if(arr[j]==a){
+                        cnt++;
                         System.out.println(j+1);
                         break;
-                    }
+                    } 
+                }
+                if (cnt == 0) {
+                    System.out.println(cnt);
                 }
             }else{
                 int a = sc.nextInt();
