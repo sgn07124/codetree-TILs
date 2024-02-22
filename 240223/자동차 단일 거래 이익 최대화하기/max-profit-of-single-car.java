@@ -7,7 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int arr [] = new int[n];
+        int arr [] = new int[1000];
         
         final int INT_MIN = Integer.MAX_VALUE;
         int minVal = INT_MIN;
