@@ -7,8 +7,9 @@ public class Main {
 
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int arr[][] = new int[m][n];
-        int sum = 0;
+        int arr[][] = new int[n][m];
+        int count = 0;
+
         
         for(int col = 0; col < m; col++) {
             if (col % 2 == 0){
