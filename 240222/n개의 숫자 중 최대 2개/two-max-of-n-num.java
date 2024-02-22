@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +12,7 @@ public class Main {
         for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+        /*
         int tmp = 0;
 
         for (int i = 0; i < n; i++) {
@@ -21,6 +24,11 @@ public class Main {
                 }
             }
         }
-        System.out.printf("%d %d", arr[0], arr[1]);
+        */
+
+        Integer[] arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        Arrays.sort(arr2, Collections.reverseOrder());
+        //System.out.printf("%d %d", arr[0], arr[1]);
+        System.out.printf("%d %d", arr2[0], arr2[1]);
     }
 }
