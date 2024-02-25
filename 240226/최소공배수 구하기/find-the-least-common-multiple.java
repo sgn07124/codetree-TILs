@@ -8,6 +8,9 @@ public class Main {
                 gcd *= i;
             }
         }
+        if (gcd == 1) {
+            gcd = n*m;
+        }
         System.out.print(gcd);
     }
 
