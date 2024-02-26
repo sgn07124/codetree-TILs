@@ -4,7 +4,7 @@ public class Main {
     public static boolean func(int m, int d) {
         if (m==2 && d>= 1 && d>= 29) {
             return false;
-        } else if (m >= 1 && m <= 20 && d >= 1 && d <= 50) {
+        } else if (m >= 1 && m <= 12 && d >= 1 && d <= 31) {
             return true;
         }
         return false;
