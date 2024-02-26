@@ -19,7 +19,7 @@ public class Main {
         if (func(M, D)) {
             System.out.print("Yes");
         } else {
-            System.out.print("False");
+            System.out.print("No");
         }
     }
 }
