@@ -6,6 +6,7 @@ public class Main {
             if (n%i==0) {
                 return false;
             }
+            
         }
         return true;
     }
@@ -20,6 +21,9 @@ public class Main {
             if (isPrime(i)) {
                 sum += i;
             }
+        }
+        if (b == 1) {
+            sum = 0;
         }
         System.out.print(sum);
     }
