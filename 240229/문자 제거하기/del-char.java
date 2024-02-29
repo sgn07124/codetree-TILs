@@ -6,8 +6,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         char [] arr = s.toCharArray();
-        int cnt = s.length();
-        for (int i = 0; i < cnt+2; i++) {
+        for (int i = 0; i <= s.length()+1; i++) {
             int a = sc.nextInt();
             int sL = s.length();
             if (a > s.length()) {
@@ -16,7 +15,6 @@ public class Main {
                 s = s.substring(0, a) + s.substring(a+1, s.length());
             }
             System.out.println(s);
-            cnt--;
         }
         
     }   
