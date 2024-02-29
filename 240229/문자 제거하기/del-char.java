@@ -4,17 +4,20 @@ public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
-        String s = sc.next();
-        char [] arr = s.toCharArray();
-        for (int i = 0; i <= s.length()+1; i++) {
+        String str = sc.next();
+        int len = str.length();
+
+        while (len>1) {
             int a = sc.nextInt();
-            int sL = s.length();
-            if (a > s.length()) {
-                s = s.substring(0, sL-1);
-            } else {
-                s = s.substring(0, a) + s.substring(a+1, s.length());
+
+            if (a >= len) {
+                a = len - 1;
             }
-            System.out.println(s);
+
+            str = str.substring(0, a) + str.substring(a+1);
+            len--;  // 어차피 하니식 빠지니까 
+
+            System.out.println(str);
         }
         
     }   
