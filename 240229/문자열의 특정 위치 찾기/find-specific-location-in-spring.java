@@ -6,8 +6,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         int c = sc.next().charAt(0);
-        int n = s.indexOf(c);
-        if (n>0) {
+        int n = -1;
+        n = s.indexOf(c);
+        if (n>=0) {
             System.out.print(n);
         } else {
             System.out.print("No");
