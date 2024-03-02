@@ -4,7 +4,7 @@ public class Main {
     static String a, b;
     public static int func() {
         int val = 0;
-        for (int i = 0; i < a.length(); i++) {
+        for (int i = 0; i < a.length()-1; i++) {
             if (a.charAt(i)==b.charAt(0) && a.charAt(i+1)==b.charAt(1)) {
                 val = i;
                 break;
