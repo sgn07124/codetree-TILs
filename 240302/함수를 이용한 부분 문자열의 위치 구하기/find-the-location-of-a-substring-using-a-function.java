@@ -2,15 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     static String a, b;
+    
     public static int func() {
         int val = 0;
-        for (int i = 0; i < a.length()-1; i++) {
-            if (a.charAt(i)==b.charAt(0) && a.charAt(i+1)==b.charAt(1)) {
-                val = i;
-                break;
+        for (int i = 0; i <= a.length() - b.length(); i++) {
+            for (int j = 0; j < b.length(); j++) {
+                if (b.charAt(j) == a.charAt(i+j)) {
+                    val++;
+                }
+            }
+            if (val == b.length()) {
+                return i;
             }
         }
-        return val;
+        return -1;
     }
 
     public static void main(String[] args) {
