@@ -4,8 +4,9 @@ public class Main {
     static String a, b;
     
     public static int func() {
-        int val = 0;
+        
         for (int i = 0; i <= a.length() - b.length(); i++) {
+            int val = 0;
             for (int j = 0; j < b.length(); j++) {
                 if (b.charAt(j) == a.charAt(i+j)) {
                     val++;
