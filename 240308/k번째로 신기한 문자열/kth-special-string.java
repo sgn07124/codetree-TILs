@@ -18,7 +18,7 @@ public class Main {
         String res = "";
         for (int i = 0; i < n; i++) {
             String ex = str[i];
-            if (ex.length() > T.length()) {
+            if (ex.length() >= T.length()) {
                 if (ex.substring(0, T.length()).equals(T)) {
                     cnt++;
                 }
