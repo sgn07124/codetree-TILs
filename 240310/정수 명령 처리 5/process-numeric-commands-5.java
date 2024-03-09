@@ -1,28 +1,31 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args)throws IOException {
         // 여기에 코드를 작성해주세요.
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        for(int i = 0; i < n; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            String s = st.nextToken();
-            if(s.equals("push_back")) {
-                int m = Integer.parseInt(st.nextToken());
-                arrayList.add(m);
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        ArrayList<Integer> v = new ArrayList<>();  // 동적 배열 선언
+
+        for (int i = 0; i < n; i++) {
+            String command = sc.next();
+
+            if(command.equals("push_back")) {
+                int num = sc.nextInt();
+                v.add(num);
+            } else if (command.equals("pop_back")) {
+                v.remove(v.size()-1);
+            } else if (command.equals("size")) {
+                System.out.println(v.size());
+            } else {
+                int index = sc.nextInt();
+                System.out.println(v.get(index-1));
             }
-            else if(s.equals("pop_back")) {
-                arrayList.remove(arrayList.size()-1);
-            }
-            else if(s.equals("get")) {
-                int m = Integer.parseInt(st.nextToken());
-                System.out.println(arrayList.get(m-1));
-            }
-            else if(s.equals("size")) {
-                System.out.println(arrayList.size());
-            }
+
+            
         }
+        
     }
 }
