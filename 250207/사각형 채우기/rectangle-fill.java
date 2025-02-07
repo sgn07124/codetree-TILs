@@ -7,6 +7,7 @@ public class Main {
 
         int [] dp = new int [1001];
 
+        dp[0] = 0;
         dp[1] = 1;
         dp[2] = 2;
 
